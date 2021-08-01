@@ -269,3 +269,7 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Bagfiles
+*/bagfiles/*
+*.bag
