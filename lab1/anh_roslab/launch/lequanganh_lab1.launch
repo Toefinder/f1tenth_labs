@@ -1,7 +1,0 @@
-<launch>
-  <node pkg="anh_roslab" type="lidar_processing.py" name="lidar_proc" output="screen"/>
-  <node pkg="rosbag" type="record" respawn="true" name="record_bag" output="screen"
-    args="-a -o $(find anh_roslab)/bagfiles/record"/>
-  <node pkg="rviz" type="rviz" name="rviz"  
-    args="-d $(find anh_roslab)/config.rviz" />
-</launch>

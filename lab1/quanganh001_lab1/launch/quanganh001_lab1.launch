@@ -1,0 +1,8 @@
+<launch>
+  <include file="$(find f1tenth_simulator)/launch/simulator.launch"/>
+  <node pkg="quanganh001_lab1" type="lidar_processing.py" name="lidar_proc" output="screen"/>
+  <node pkg="rosbag" type="record" respawn="true" name="record_bag" output="screen"
+    args="-a -o $(find quanganh001_lab1)/bagfiles/record"/>
+  <node pkg="rviz" type="rviz" name="rviz_custom"  
+    args="-d $(find quanganh001_lab1)/config.rviz" />
+</launch>

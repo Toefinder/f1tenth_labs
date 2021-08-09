@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>anh_roslab</name>
+  <name>quanganh001_lab1</name>
   <version>0.0.0</version>
   <description>The anh_roslab package for first f1tenth lab</description>
 
@@ -23,6 +23,9 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
+  <exec_depend>f1tenth_simulator</exec_depend>
+  <exec_depend>python-numpy</exec_depend>
+
   <depend>sensor_msgs</depend>
 
 </package>

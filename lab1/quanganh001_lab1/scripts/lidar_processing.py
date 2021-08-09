@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import rospy
+import numpy as np
 from std_msgs.msg import Float64
 from sensor_msgs.msg import LaserScan as LaserScanMsg
 from anh_roslab.msg import scan_range
@@ -15,12 +16,13 @@ class PublisherSubscriber:
         self.msg = scan_range()
 
     def callback(self, data):
-        self.closest_point = min(data.ranges)
-        self.farthest_point = max(data.ranges)
+        scan_data = np.array(data.ranges)
+        valid_scan_data = scan_data[~ np.isinf(scan_data) & ~ np.isnan(scan_data)]
+        self.closest_point = min(valid_scan_data)
+        self.farthest_point = max(valid_scan_data)
         self.msg.min_val = self.closest_point
         self.msg.max_val = self.farthest_point
         self.msg.header = data.header
-        rospy.loginfo(rospy.get_caller_id() + ' number of range data %s', len(data.ranges))
         self.closest_pub.publish(self.closest_point)
         self.farthest_pub.publish(self.farthest_point)
         self.range_pub.publish(self.msg)        
