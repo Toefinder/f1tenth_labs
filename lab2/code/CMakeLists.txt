@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(safety)
+project(quanganh001_lab2)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
@@ -18,8 +18,6 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(safety_node src/safety_node.cpp)
-
-target_link_libraries(safety_node
-  ${catkin_LIBRARIES}
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
 )

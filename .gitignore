@@ -273,3 +273,5 @@ TSWLatexianTemp*
 # Bagfiles
 */bagfiles/*
 *.bag
+*/quanganh001_lab?/
+*.zip
