@@ -70,8 +70,7 @@
   <exec_depend>rospy</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>std_msgs</exec_depend>
-  <exec_depend>numpy</exec_depend>
-
+  <exec_depend>python-numpy</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
