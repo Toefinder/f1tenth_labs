@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find f1tenth_simulator)/launch/simulator.launch">
+    <args name="map" value="$(find quanganh001_lab4)/levine_blocked.pgm" />
+  </include>
+  <node pkg="quanganh001_lab4" type="reactive_gap_follow.py" name="safety_node" output="screen"/>
+</launch>
