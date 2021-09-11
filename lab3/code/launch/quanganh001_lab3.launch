@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find f1tenth_simulator)/launch/simulator.launch">
+    <arg name="map" value="$(find f1tenth_simulator)/maps/levine_blocked.yaml" />
+  </include>
+  <node pkg="quanganh001_lab3" type="wall_follow.py" name="safety_node" output="screen"/>
+</launch>

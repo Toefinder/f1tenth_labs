@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>wall_follow</name>
+  <name>quanganh001_lab3</name>
   <version>0.0.0</version>
   <description>The wall_follow package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="dhruvkar@seas.upenn.edu">Dhruv Karthik</maintainer>
+  <maintainer email="lequanganhok@gmail.com">Le Quang Anh</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(wall_follow)
+project(quanganh001_lab3)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -7,7 +7,15 @@ project(wall_follow)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+  ackermann_msgs
+  geometry_msgs
+  nav_msgs
+  roscpp
+  rospy
+  sensor_msgs
+  std_msgs
+)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -181,12 +189,16 @@ include_directories(
 #   PATTERN ".svn" EXCLUDE
 # )
 
+catkin_install_python(PROGRAMS
+  src/wall_follow.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
 ## Mark other files for installation (e.g. launch and bag files, etc.)
-# install(FILES
-#   # myfile1
-#   # myfile2
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
+
 
 #############
 ## Testing ##
