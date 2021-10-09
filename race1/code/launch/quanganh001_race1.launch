@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find f1tenth_simulator)/launch/simulator.launch">
+    <args name="map" value="$(find quanganh001_race1)/levine_blocked.pgm" />
+  </include>
+  <node pkg="quanganh001_race1" type="race.py" name="safety_node" output="screen"/>
+</launch>
