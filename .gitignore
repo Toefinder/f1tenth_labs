@@ -278,3 +278,6 @@ TSWLatexianTemp*
 
 # VS Code
 **/.vscode
+
+# Notebook checkpoints
+**/.ipynb_checkpoints
