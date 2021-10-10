@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>pure_pursuit</name>
+  <name>quanganh001_lab6</name>
   <version>0.0.0</version>
   <description>The pure_pursuit package</description>
 
@@ -70,6 +70,7 @@
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>python-pandas</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
