@@ -5,11 +5,9 @@ from pathlib import Path
 import pandas as pd
 
 node_name = "visualize_waypoint_node"
-rviz_markers_topic = "visualization_marker_array"
+rviz_markers_topic = "/waypoint_vis_array"
 frame_id = "map"
-main_waypoint_filepath = Path("~/catkin_ws/logs/summary-wp-2021-10-09-04-31-06.csv")
-
-
+main_waypoint_filepath = Path(rospy.get_param("/f1tenth/waypoint_file"))
 main_waypoint_df = pd.read_csv(main_waypoint_filepath)
 marker_array_msg = MarkerArray()
 def make_markers(row):

@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find f1tenth_simulator)/launch/simulator.launch">
+    <arg name="map" value="$(find f1tenth_simulator)/maps/levine_blocked.yaml" />
+  </include>
+  <node pkg="quanganh001_lab6" type="pure_pursuit.py" name="pure_pursuit_node" output="screen"/>
+
+  <param name="/f1tenth/waypoint_file" type="str" value="$(find quanganh001_lab6)/logs/summary-wp-2021-10-09-04-31-06.csv" />
+  <node pkg="quanganh001_lab6" type="visualize_waypoint.py" name="visualize_waypoint_node" output="screen" />
+</launch>
