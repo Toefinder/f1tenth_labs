@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find f1tenth_simulator)/launch/simulator.launch">
+    <arg name="map" value="$(find f1tenth_simulator)/maps/levine_blocked.yaml" />
+  </include>
+  <rosparam command="load" file="$(find lab7)/rrt_params.yaml" />
+  <node pkg="lab7" type="rrt" name="rrt_node" output="screen"/>
+  <!-- Launch RVIZ -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find f1tenth_simulator)/launch/lab7.rviz" output="screen"/>
+</launch>

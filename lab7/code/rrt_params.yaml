@@ -1,8 +1,28 @@
 # Topics that RRT listens to
 # TODO: add your own
 # TODO: change this to the pose topic published particle filter
-pose_topic: "some_pose_topic"
-scan_topic: "some_scan_topic"
+# pose_topic: "/odom"
+# scan_topic: "/scan"
+# drive_topic: "/nav"
+# env_viz: "/env_viz"
+# dynamic_viz: "/dynamic_viz"
+# static_viz: "/static_viz"
+# tree_lines: "/tree_lines"
+# map_viz_topic: "/map_viz"
+# map_topic: "/map"
+
+# Driving Params
+fov: 180
+min_goal_distance: 1.0
+steer_length: 0.30
+lookahead_distance: 0.5
+max_iteration: 100 
+gain: 2.0
+goal_distance: 0.1
+
+
+# flags for debugging
+publish_grid: true
 
 # Topics that RRT publishes to
 # TODO: add your own

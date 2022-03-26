@@ -5,6 +5,9 @@ Author: Hongrui Zheng
 
 This file contains the class definition for tree nodes and RRT
 Before you start, please read: https://arxiv.org/pdf/1105.1186.pdf
+
+Assignment reference:
+https://amitrokh.github.io/CMSC498F/assignments/assignment_4/doc/project_4.pdf 
 """
 import numpy as np
 from numpy import linalg as LA
@@ -30,7 +33,7 @@ class Node(object):
         self.y = None
         self.parent = None
         self.cost = None # only used in RRT*
-        self.is_root = false
+        self.is_root = False
 
 # class def for RRT
 class RRT(object):

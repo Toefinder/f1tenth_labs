@@ -1,5 +1,6 @@
 <launch>
-  <param name="robot_description" command="$(find xacro)/xacro '$(find f110_description)/urdf/F110.xacro'" />
+  <param name="/use_sim_time" value="true" />
+  <param name="robot_description" command="$(find xacro)/xacro '$(find f110_description)/urdf/racecar.xacro'" />
   <node name="robot_state_publisher" pkg="robot_state_publisher"
     type="robot_state_publisher" />
 
@@ -14,6 +15,11 @@
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
 
+   <node name="playbag" pkg="rosbag" type="play"
+      args="--clock $(arg bag_filename)" />
+
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+    args="-d /home/anh/carto_ws/src/cartographer_ros/cartographer_ros/configuration_files/demo_2d.rviz" />
 
 
 </launch>
